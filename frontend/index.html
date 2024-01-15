@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction App</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Weather Prediction App</h1>
+
+    <label for="temperature">Temperature:</label>
+    <input type="number" id="temperature" step="0.1"><br>
+
+    <label for="feelslike">Feels Like:</label>
+    <input type="number" id="feelslike" step="0.1"><br>
+
+    <label for="dewpoint">Dewpoint:</label>
+    <input type="number" id="dewpoint" step="0.1"><br>
+
+    <label for="humidity">Humidity:</label>
+    <input type="number" id="humidity" step="0.1"><br>
+
+    <label for="precipitation">Precipitation:</label>
+    <input type="number" id="precipitation" step="0.1"><br>
+
+    <label for="precipprob">Precipitation Probability:</label>
+    <input type="number" id="precipprob" step="0.1"><br>
+
+    <label for="preciptype">Precipitation Type:</label>
+    <input type="text" id="preciptype"><br>
+
+    <label for="snow">Snow:</label>
+    <input type="number" id="snow" step="0.1"><br>
+
+    <label for="snowdepth">Snow Depth:</label>
+    <input type="number" id="snowdepth" step="0.1"><br>
+
+    <label for="windgust">Wind Gust:</label>
+    <input type="number" id="windgust" step="0.1"><br>
+
+    <label for="windspeed">Wind Speed:</label>
+    <input type="number" id="windspeed" step="0.1"><br>
+
+    <label for="winddirection">Wind Direction:</label>
+    <input type="number" id="winddirection" step="0.1"><br>
+
+    <label for="sealevelpressure">Sea Level Pressure:</label>
+    <input type="number" id="sealevelpressure" step="0.1"><br>
+
+    <label for="cloudcover">Cloud Cover:</label>
+    <input type="number" id="cloudcover" step="0.1"><br>
+
+    <label for="visibility">Visibility:</label>
+    <input type="number" id="visibility" step="0.1"><br>
+
+    <label for="solarradiation">Solar Radiation:</label>
+    <input type="number" id="solarradiation" step="0.1"><br>
+
+    <label for="uvindex">UV Index:</label>
+    <input type="number" id="uvindex" step="0.1"><br>
+
+    <label for="severerisk">Severe Risk:</label>
+    <input type="number" id="severerisk" step="0.1"><br>
+
+    <label for="conditions">Conditions:</label>
+    <input type="text" id="conditions"><br>
+
+    <button onclick="predictWeather()">Predict</button>
+    <div id="result"></div>
+</body>
+</html>
