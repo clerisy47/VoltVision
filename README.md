@@ -68,6 +68,11 @@ The deployment pipeline uses ZenML's MLflow tracking integration for logging hyp
 
 A Streamlit application is deployed to consume the latest model service asynchronously from the pipeline logic.
 
+![training_and_deployment_pipeline](_assets/pipeline.png)
+
+
+
+
 ## Diving into the Code
 
 Run the training pipeline:
