@@ -14,8 +14,8 @@ class IngestData:
         pass
 
     def get_data(self) -> pd.DataFrame:
-        df_demand = pd.read_csv('../../dataset/Demand Forecasting/Demand Forecasting Demand Data upto Feb 21.csv', sep=',')
-        df_weather = pd.read_csv('../../dataset/Demand Forecasting/Demand Forecasting Weather Data upto Feb 28.csv', sep=',')
+        df_demand = pd.read_csv('../dataset/Demand Forecasting/Demand Forecasting Demand Data upto Feb 21.csv', sep=',')
+        df_weather = pd.read_csv('../dataset/Demand Forecasting/Demand Forecasting Weather Data upto Feb 28.csv', sep=',')
         df_merged=pd.merge(left=df_demand,right=df_weather, on='datetime')
         return df_merged
 
