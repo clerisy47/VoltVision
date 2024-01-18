@@ -1,7 +1,7 @@
 import logging
 
 import pandas as pd
-from zenml import step
+
 
 
 class IngestData:
@@ -14,11 +14,11 @@ class IngestData:
         pass
 
     def get_data(self) -> pd.DataFrame:
-        df_price = pd.read_csv('../../dataset/Price forecasting/Price Forecasting data upto December 24.csv', sep=',')
+        df_price = pd.read_csv('./dataset/Price forecasting/Price Forecasting data upto December 24.csv', sep=',')
         return df_price
 
 
-@step
+
 def ingest_data() -> pd.DataFrame:
     """
     Args:
