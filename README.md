@@ -2,6 +2,8 @@
 
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/zenml)](https://pypi.org/project/zenml/)
 
+Presentation link for the project: https://www.canva.com/design/DAF6OD-oHkk/MdA1Nltv_iqwEGbWbSLrtA/edit?utm_content=DAF6OD-oHkk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 ## Problem Statement
 
 The energy industry is navigating a transformative phase characterized by rapid modernization and technological advancements. Infrastructure upgrades, integration of intermittent renewable energy sources, and evolving consumer demands are reshaping the sector. However, the progress comes with challenges like volatile supply, demand, and prices, rendering the future less predictable. Traditional business models are also being fundamentally challenged. In this competitive and dynamic landscape, accurate decision-making is pivotal.
