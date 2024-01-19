@@ -1,6 +1,6 @@
 import logging
 import pandas as pd
-
+from zenml import step
 
 class DataPreprocessing:
     """
@@ -67,10 +67,12 @@ class DataPreprocessing:
          for column in columms_to_drop:
               self.drop_col(column)
               
+
+@step
 def dataPreprocessing(df) -> pd.DataFrame:
     """
     Args:
-        None
+        df: pd.DataFrame
     Returns:
         df: pd.DataFrame
     """

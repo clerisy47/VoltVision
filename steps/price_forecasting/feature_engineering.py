@@ -1,8 +1,8 @@
 import logging
-from data_preprocessing import dataPreprocessing
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
+from zenml import step
 
 class FeatureEngineering:
     """
@@ -37,17 +37,17 @@ class FeatureEngineering:
             dataY.append(dataset[i + time_step, 0])
         return np.array(dataX), np.array(dataY)
 
-              
-def featureEngineering() -> pd.DataFrame:
+@step
+def featureEngineering(df) -> pd.DataFrame:
     """
     Args:
-        None
+        df: pd.DataFrame
     Returns:
         df: pd.DataFrame
     """
     try:
         # df = assign from somewhere
-       featureEngineering = FeatureEngineering(dataPreprocessing())
+       featureEngineering = FeatureEngineering(df)
        featureEngineering.normalize_data("Prices\n(EUR/MWh)")
        df_train, df_test = featureEngineering.train_test_split(0.8)
        X_train, y_train = featureEngineering.create_dataset(df_train, 15)

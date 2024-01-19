@@ -2,6 +2,7 @@ import logging
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
+from zenml import step
 
 class FeatureEngineering:
     """
@@ -34,11 +35,11 @@ class FeatureEngineering:
         y_test = y[int(train_size * len(y)):]
         return X_train, X_test, y_train, y_test
 
-              
+@step
 def featureEngineering(df) -> pd.DataFrame:
     """
     Args:
-        None
+        df: pd.DataFrame
     Returns:
         df: pd.DataFrame
     """

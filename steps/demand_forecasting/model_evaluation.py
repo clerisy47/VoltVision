@@ -3,7 +3,7 @@ import logging
 import mlflow
 import numpy as np
 import pandas as pd
-from model.evaluation import MSE, RMSE, R2Score
+from sklearn.metrics import mean_squared_error as MSE, r2_score as R2Score, mean_absolute_error as MAE
 from sklearn.base import RegressorMixin
 from typing_extensions import Annotated
 from zenml import step

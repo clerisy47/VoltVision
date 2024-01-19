@@ -10,12 +10,12 @@ from xgboost import XGBRegressor
 from zenml.io import fileio
 from zenml.materializers.base_materializer import BaseMaterializer
 
-DEFAULT_FILENAME = "CustomerSatisfactionEnvironment"
+DEFAULT_FILENAME = "Demand and Price Forecasting"
 
 
 class cs_materializer(BaseMaterializer):
     """
-    Custom materializer for the Customer Satisfaction Project
+    Custom materializer for Demand Price Forecasting
     """
 
     ASSOCIATED_TYPES = (

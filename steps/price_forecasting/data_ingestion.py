@@ -1,5 +1,5 @@
 import logging
-
+from zenml import step
 import pandas as pd
 
 
@@ -18,7 +18,7 @@ class IngestData:
         return df_price
 
 
-
+@step
 def ingest_data() -> pd.DataFrame:
     """
     Args:

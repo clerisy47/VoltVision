@@ -1,5 +1,5 @@
 import logging
-from data_ingestion import ingest_data
+from zenml import step
 import pandas as pd
 import numpy as np
 import scipy
@@ -35,16 +35,15 @@ class DataPreprocessing:
     
 
  
-def dataPreprocessing() -> pd.DataFrame:
+def dataPreprocessing(df) -> pd.DataFrame:
     """
     Args:
-        None
+        df: pd.DataFrame
     Returns:
         df: pd.DataFrame
     """
     try:
-        # df = assign from somewhere
-        datapreprocessing = DataPreprocessing(ingest_data())
+        datapreprocessing = DataPreprocessing(df)
         datapreprocessing.remove_unreliable_rows() # new df is not returned but org df is modified.
         datapreprocessing.fillnan("Prices\n(EUR/MWh)")
         datapreprocessing.interpolate_data("Prices\n(EUR/MWh)")
