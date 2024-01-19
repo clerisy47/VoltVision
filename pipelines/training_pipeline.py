@@ -21,3 +21,4 @@ def train_pipeline(ingest_data, clean_data, model_train, evaluation):
     x_train, x_test, y_train, y_test = clean_data(df)
     model = model_train(x_train, x_test, y_train, y_test)
     r2score, rmse = evaluation(model, x_test, y_test)
+    return r2score, rmse

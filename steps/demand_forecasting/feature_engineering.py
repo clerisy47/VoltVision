@@ -1,5 +1,4 @@
 import logging
-from data_preprocessing import dataPreprocessing
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
@@ -36,7 +35,7 @@ class FeatureEngineering:
         return X_train, X_test, y_train, y_test
 
               
-def featureEngineering() -> pd.DataFrame:
+def featureEngineering(df) -> pd.DataFrame:
     """
     Args:
         None
@@ -45,7 +44,7 @@ def featureEngineering() -> pd.DataFrame:
     """
     try:
         # df = assign from somewhere
-       featureEngineering = FeatureEngineering(dataPreprocessing())
+       featureEngineering = FeatureEngineering(df)
        featureEngineering.handle_categorical_data('conditions')
        normalized_data = featureEngineering.normalize_data(3,7)
        splitted_data = featureEngineering.train_test_split(*normalized_data, 0.8)
@@ -55,6 +54,3 @@ def featureEngineering() -> pd.DataFrame:
     except Exception as e:
         logging.error(e)
         raise e
-    
-
-print(featureEngineering())

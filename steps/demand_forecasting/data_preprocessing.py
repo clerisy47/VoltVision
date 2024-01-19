@@ -1,5 +1,4 @@
 import logging
-from data_ingestion import ingest_data
 import pandas as pd
 
 
@@ -68,7 +67,7 @@ class DataPreprocessing:
          for column in columms_to_drop:
               self.drop_col(column)
               
-def dataPreprocessing() -> pd.DataFrame:
+def dataPreprocessing(df) -> pd.DataFrame:
     """
     Args:
         None
@@ -77,7 +76,7 @@ def dataPreprocessing() -> pd.DataFrame:
     """
     try:
         # df = assign from somewhere
-        datapreprocessing = DataPreprocessing(ingest_data())
+        datapreprocessing = DataPreprocessing(df)
         datapreprocessing.fillna("severerisk")
         datapreprocessing.remove_unreliable_cols() # new df is not returned but org df is modified.
         datapreprocessing.interpolate_data()
@@ -89,6 +88,3 @@ def dataPreprocessing() -> pd.DataFrame:
     except Exception as e:
         logging.error(e)
         raise e
-    
-
-print(dataPreprocessing())
