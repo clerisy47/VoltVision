@@ -2,7 +2,9 @@
 
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/zenml)](https://pypi.org/project/zenml/)
 
-Presentation link for the project: https://www.canva.com/design/DAF6OD-oHkk/MdA1Nltv_iqwEGbWbSLrtA/edit?utm_content=DAF6OD-oHkk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+[Presentation link for the project](https://www.canva.com/design/DAF6OD-oHkk/MdA1Nltv_iqwEGbWbSLrtA/edit?utm_content=DAF6OD-oHkk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+[Project Documentation](./Nansoscopic_Innovators_Documentation.pdf)
 
 ## Problem Statement
 
